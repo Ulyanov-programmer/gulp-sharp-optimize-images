@@ -33,36 +33,36 @@ import sharpOptimizeImages from 'gulp-sharp-optimize-images'
 import gulp from 'gulp'
 
 export function yourImages() {
-	return gulp.src('yourSrcImagePath')
-		.pipe(
-			sharpOptimizeImages({
-				jpg: {
-					quality: 100,
-					progressive: false,
-					mozjpeg: true,
-				},
-				webp: {
-					quality: 80,
-					lossless: false,
-				},
-				avif: {
-					quality: 100,
-					lossless: true,
-					effort: 4,
-				}
-			})
-		)
+  return gulp.src('yourSrcImagePath')
+    .pipe(
+      sharpOptimizeImages({
+        jpg: {
+          quality: 100,
+          progressive: false,
+          mozjpeg: true,
+        },
+        webp: {
+          quality: 80,
+          lossless: false,
+        },
+        avif: {
+          quality: 100,
+          lossless: true,
+          effort: 4,
+        }
+      })
+    )
 
-		.pipe(gulp.dest('yourDistImagePath'))
+    .pipe(gulp.dest('yourDistImagePath'))
 }
 ```
 
 ## API
 ```js
 sharpOptimizeImages({
-	outputImageObject: {
-		param: value,
-	},
+  outputImageObject: {
+   param: value,
+  },
 })
 ```
 
