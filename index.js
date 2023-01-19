@@ -18,7 +18,7 @@ const optionsByDefualt = {
 }
 
 
-export default function sharpImageOptimize(options) {
+export default function sharpOptimizeImages(options) {
 	return obj(async function (file, enc, callback) {
 		if (file.isNull()) {
 			return callback(null, file)
