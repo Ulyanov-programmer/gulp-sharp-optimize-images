@@ -83,3 +83,6 @@ Type: `any` (depends on the parameter)<br>
 Option for the output image. <br>
 To get acquainted with all the available parameters, please take a look
 https://sharp.pixelplumbing.com/api-output#jpeg
+
+### If you find a bug, please create an issue [here](https://github.com/Ulyanov-programmer/gulp-sharp-optimize-images/issues).
+### If this project was useful to you, you can give it a ★ in [repository](https://github.com/Ulyanov-programmer/gulp-sharp-optimize-images).
