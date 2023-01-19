@@ -61,7 +61,7 @@ export function yourImages() {
 ```js
 sharpOptimizeImages({
   outputImageObject: {
-   param: value,
+    param: value,
   },
 })
 ```
