@@ -1,0 +1,40 @@
+{
+	"name": "gulp-sharp-optimize-images",
+	"version": "1.0.0",
+	"description": "Compression and conversion of images for gulp using sharp.",
+	"main": "index.js",
+	"scripts": {},
+	"author": {
+		"name": "Ulyanov Ivan",
+		"url": "https://github.com/Ulyanov-programmer"
+	},
+	"license": "ISC",
+	"repository": {
+		"type": "git",
+		"url": "https://"
+	},
+	"keywords": [
+		"gulp",
+		"sharp",
+		"images",
+		"image",
+		"compress",
+		"conventer",
+		"convert",
+		"png",
+		"jpg",
+		"jpeg",
+		"webp",
+		"avif"
+	],
+	"dependencies": {
+		"sharp": "^0.31.3",
+		"through2": "^4.0.2",
+		"vinyl": "^3.0.0"
+	},
+	"devDependencies": {
+		"@types/sharp": "^0.31.3",
+		"@types/through2": "^4.0.2",
+		"@types/vinyl": "^3.0.0"
+	}
+}
