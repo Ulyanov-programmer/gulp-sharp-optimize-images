@@ -11,8 +11,9 @@
 	"license": "ISC",
 	"repository": {
 		"type": "git",
-		"url": "https://"
+		"url": "https://github.com/Ulyanov-programmer/gulp-sharp-optimize-images"
 	},
+	"homepage": "https://github.com/Ulyanov-programmer/gulp-sharp-optimize-images",
 	"keywords": [
 		"gulp",
 		"sharp",
@@ -27,6 +28,9 @@
 		"webp",
 		"avif"
 	],
+	"engines": {
+		"node": ">=14.15.0"
+	},
 	"dependencies": {
 		"sharp": "^0.31.3",
 		"through2": "^4.0.2",
