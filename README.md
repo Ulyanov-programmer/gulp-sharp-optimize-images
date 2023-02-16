@@ -74,11 +74,11 @@ sharpOptimizeImages({
 Type: `object`<br>
 An object that allows you to convert `all` images into images of a `specific type`.
 <br>
-Optimizes and transmits the original.
+Also optimizes and transmits the original.
 <br>
 
 ```js
-// example, all images will be converted to avif
+// example, all images will be converted to avif. The originals will also be optimized and transferred.
 avif: {
   param: value,
 },
