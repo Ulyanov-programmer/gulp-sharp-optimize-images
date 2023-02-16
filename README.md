@@ -36,11 +36,6 @@ export function yourImages() {
   return gulp.src('yourSrcImagePath')
     .pipe(
       sharpOptimizeImages({
-        jpg: {
-          quality: 100,
-          progressive: false,
-          mozjpeg: true,
-        },
         webp: {
           quality: 80,
           lossless: false,
@@ -49,7 +44,13 @@ export function yourImages() {
           quality: 100,
           lossless: true,
           effort: 4,
-        }
+        },
+        png_to_heif: {
+          quality: 90,
+        },
+        jpg_to_avif: {
+          quality: 50,
+        },
       })
     )
 
@@ -60,16 +61,48 @@ export function yourImages() {
 ## API
 ```js
 sharpOptimizeImages({
-  outputImageObject: {
+  outputImageExtname: {
+    param: value,
+  },
+  imageExtname_to_imageExtname: {
     param: value,
   },
 })
 ```
 
-### outputImageObject
+### outputImageExtname
 Type: `object`<br>
-An object containing the name (format name) of an output image and its properties. <br>
-Supported format names: 
+An object that allows you to convert `all` images into images of a `specific type`.
+<br>
+Optimizes and transmits the original.
+<br>
+
+```js
+// example, all images will be converted to avif
+avif: {
+  param: value,
+},
+```
+
+#### param
+Type: `any` (depends on the parameter)<br>
+Option for an output image. <br>
+To get acquainted with all the available parameters, please take a look:
+https://sharp.pixelplumbing.com/api-output#jpeg
+
+### imageExtname_to_imageExtname
+Type: `object`<br>
+An object that allows you to convert images of a `specific type` into images of a `specific type`. <br>
+Does not transmit the original. <br>
+
+```js
+// example, all images in the format .jpg will be converted to .heif
+jpg_to_heif: {
+  param: value,
+},
+```
+
+### Supported format names: 
 - `png`
 - `jpg` | `jpeg`
 - `webp`
@@ -77,12 +110,6 @@ Supported format names:
 - `tiff`
 - `heif`
 - `gif`
-
-### param
-Type: `any` (depends on the parameter)<br>
-Option for the output image. <br>
-To get acquainted with all the available parameters, please take a look
-https://sharp.pixelplumbing.com/api-output#jpeg
 
 ### If you find a bug, please create an issue [here](https://github.com/Ulyanov-programmer/gulp-sharp-optimize-images/issues).
 ### If this project was useful to you, you can give it a ★ in [repository](https://github.com/Ulyanov-programmer/gulp-sharp-optimize-images).
