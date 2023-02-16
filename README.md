@@ -4,7 +4,7 @@
 
 ## What is this
 ### With this thing you can: <br>
-- Optimize your images
+- Optimize your images.
 - Convert your images to other formats (including, but not limited to `.webp` and `.avif`).
 ### Features
 - Using the [sharp](https://www.npmjs.com/package/sharp) plugin.
@@ -13,7 +13,7 @@
 
 ## Why is this
 
-- [imagemin](https://www.npmjs.com/package/imagemin) is unmaintained, [see the issue](https://github.com/imagemin/imagemin/issues/385)
+- [imagemin](https://www.npmjs.com/package/imagemin) is unmaintained, [see the issue](https://github.com/imagemin/imagemin/issues/385).
 - [gulp-libsquoosh](https://www.npmjs.com/package/gulp-libsquoosh) uses the outdated library [@squoosh/lib](https://www.npmjs.com/package/@squoosh/lib), which does not have support for node > 16.0.0. In addition, the squoosh lib is no longer maintained.
 - [@donmahallem/gulp-sharp](https://www.npmjs.com/package/@donmahallem/gulp-sharp) does not have normal documentation.
 - I have not found a single plugin that would simultaneously allow you to use the [sharp library](https://www.npmjs.com/package/sharp), convert and optimize images.
