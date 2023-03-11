@@ -100,6 +100,10 @@ Does not transmit the original. <br>
 jpg_to_heif: {
   param: value,
 },
+// you can also optimize images without changing the extension
+jpg_to_jpg: {
+  param: value,
+},
 ```
 
 ### Supported format names: 
