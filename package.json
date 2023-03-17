@@ -1,48 +1,51 @@
 {
-	"name": "gulp-sharp-optimize-images",
-	"version": "2.0.0",
-	"description": "Compression and conversion of images for gulp using sharp.",
-	"main": "index.js",
-	"scripts": {},
-	"type": "module",
-	"author": {
-		"name": "Ulyanov Ivan",
-		"url": "https://github.com/Ulyanov-programmer"
-	},
-	"license": "ISC",
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/Ulyanov-programmer/gulp-sharp-optimize-images"
-	},
-	"homepage": "https://github.com/Ulyanov-programmer/gulp-sharp-optimize-images",
-	"keywords": [
-		"gulp",
-		"sharp",
-		"images",
-		"image",
-		"compress",
-		"converter",
-		"convert",
-		"png",
-		"jpg",
-		"jpeg",
-		"webp",
-		"avif"
-	],
-	"engines": {
-		"node": ">=14.15.0"
-	},
-	"bugs": {
-		"url": "https://github.com/Ulyanov-programmer/gulp-sharp-optimize-images/issues"
-	},
-	"dependencies": {
-		"sharp": "^0.31.3",
-		"through2": "^4.0.2",
-		"vinyl": "^3.0.0"
-	},
-	"devDependencies": {
-		"@types/sharp": "^0.31.3",
-		"@types/through2": "^4.0.2",
-		"@types/vinyl": "^3.0.0"
-	}
+  "name": "gulp-sharp-optimize-images",
+  "version": "2.0.0",
+  "description": "Compression and conversion of images for gulp using sharp.",
+  "main": "index.js",
+  "scripts": {},
+  "type": "module",
+  "author": {
+    "name": "Ulyanov Ivan",
+    "url": "https://github.com/Ulyanov-programmer"
+  },
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Ulyanov-programmer/gulp-sharp-optimize-images"
+  },
+  "homepage": "https://github.com/Ulyanov-programmer/gulp-sharp-optimize-images",
+  "keywords": [
+    "gulp",
+    "sharp",
+    "images",
+    "image",
+    "compress",
+    "converter",
+    "convert",
+    "png",
+    "jpg",
+    "jpeg",
+    "webp",
+    "gif",
+    "tiff",
+    "heif",
+    "avif"
+  ],
+  "engines": {
+    "node": ">=14.15.0"
+  },
+  "bugs": {
+    "url": "https://github.com/Ulyanov-programmer/gulp-sharp-optimize-images/issues"
+  },
+  "dependencies": {
+    "sharp": "^0.31.3",
+    "through2": "^4.0.2",
+    "vinyl": "^3.0.0"
+  },
+  "devDependencies": {
+    "@types/sharp": "^0.31.3",
+    "@types/through2": "^4.0.2",
+    "@types/vinyl": "^3.0.0"
+  }
 }
