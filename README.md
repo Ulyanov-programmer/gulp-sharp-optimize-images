@@ -25,8 +25,14 @@
 
 ### Installation
 
-```sh
-$ npm install --D gulp-sharp-optimize-images
+```
+npm i --D gulp-sharp-optimize-images
+```
+
+_OR_
+
+```
+yarn add gulp-sharp-optimize-images -D
 ```
 
 ### Example of usage
