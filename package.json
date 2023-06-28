@@ -39,12 +39,11 @@
     "url": "https://github.com/Ulyanov-programmer/gulp-sharp-optimize-images/issues"
   },
   "dependencies": {
-    "sharp": "^0.31.3",
+    "sharp": "^0.32.1",
     "through2": "^4.0.2",
     "vinyl": "^3.0.0"
   },
   "devDependencies": {
-    "@types/sharp": "^0.31.3",
     "@types/through2": "^4.0.2",
     "@types/vinyl": "^3.0.0"
   }
