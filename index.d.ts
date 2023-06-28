@@ -1,4 +1,4 @@
-declare function sharpOptimizeImages(params: SharpOptimizeImagesInputTypes): internal.Transform
+declare function sharpOptimizeImages(params: SharpOptimizeImagesInputTypes)
 
 interface SharpOptimizeImagesInputTypes {
   gif: SharpOptimizeImagesTypesParams
@@ -19,10 +19,12 @@ interface SharpOptimizeImagesTypesParams {
   mozjpeg?: boolean
   effort?: number
   reuse?: boolean
-  delay?: number | Array.<number>
+  delay?: number | Array<number>
   force?: boolean
 }
 
+export default sharpOptimizeImages
+
 export {
-  sharpOptimizeImages,
+  sharpOptimizeImages
 }

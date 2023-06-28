@@ -43,8 +43,5 @@
     "through2": "^4.0.2",
     "vinyl": "^3.0.0"
   },
-  "devDependencies": {
-    "@types/through2": "^4.0.2",
-    "@types/vinyl": "^3.0.0"
-  }
+  "devDependencies": {}
 }
