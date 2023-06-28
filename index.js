@@ -2,7 +2,7 @@ import { obj } from 'through2'
 import sharp from 'sharp'
 import Vinyl from 'vinyl'
 
-const ALLOWED_EXTENTIONS = [
+const ALLOWED_EXTENSIONS = [
   '.gif',
   '.png',
   '.jpg', '.jpeg',
@@ -11,7 +11,7 @@ const ALLOWED_EXTENTIONS = [
   '.tiff',
   '.heif',
 ]
-const optionsByDefualt = {
+const optionsByDefault = {
   quality: 90,
   lossless: false,
   chromaSubsampling: '4:2:0'
@@ -23,7 +23,7 @@ export default function sharpOptimizeImages(options) {
     if (file.isNull()) {
       return callback(null, file)
     }
-    if (ALLOWED_EXTENTIONS.includes(file.extname) == false) {
+    if (ALLOWED_EXTENSIONS.includes(file.extname) == false) {
       console.error(`${file.basename} not supported, just copy.`)
 
       return callback(null, file)
@@ -36,9 +36,9 @@ export default function sharpOptimizeImages(options) {
     let optionObjects = Object.entries(options)
 
     for (let [optionObjectFormat, optionObjectProps] of optionObjects) {
-      let splitedObjectName = optionObjectFormat.split('_to_')
-      let convertFromOfGeneralExtname = splitedObjectName[0]
-      let convertToExtname = splitedObjectName[1]
+      let splittedObjectName = optionObjectFormat.split('_to_')
+      let convertFromOfGeneralExtname = splittedObjectName[0]
+      let convertToExtname = splittedObjectName[1]
 
       if (extnamesIsCorrect(convertFromOfGeneralExtname, convertToExtname) == false) {
         throw new Error('Invalid name of an object! Make sure you have spelled the extension names correctly.')
@@ -69,26 +69,26 @@ async function convert(file, newFileFormat, options) {
 
   switch (newFileFormat) {
     case 'gif':
-      sharpInstance = sharpInstance.gif(Object.assign(optionsByDefualt, options))
+      sharpInstance = sharpInstance.gif(Object.assign(optionsByDefault, options))
       break
     case 'png':
-      sharpInstance = sharpInstance.png(Object.assign(optionsByDefualt, options))
+      sharpInstance = sharpInstance.png(Object.assign(optionsByDefault, options))
       break
     case 'jpg':
     case 'jpeg':
-      sharpInstance = sharpInstance.jpeg(Object.assign(optionsByDefualt, options))
+      sharpInstance = sharpInstance.jpeg(Object.assign(optionsByDefault, options))
       break
     case 'webp':
-      sharpInstance = sharpInstance.webp(Object.assign(optionsByDefualt, options))
+      sharpInstance = sharpInstance.webp(Object.assign(optionsByDefault, options))
       break
     case 'tiff':
-      sharpInstance = sharpInstance.tiff(Object.assign(optionsByDefualt, options))
+      sharpInstance = sharpInstance.tiff(Object.assign(optionsByDefault, options))
       break
     case 'avif':
-      sharpInstance = sharpInstance.avif(Object.assign(optionsByDefualt, options))
+      sharpInstance = sharpInstance.avif(Object.assign(optionsByDefault, options))
       break
     case 'heif':
-      sharpInstance = sharpInstance.heif(Object.assign(optionsByDefualt, options))
+      sharpInstance = sharpInstance.heif(Object.assign(optionsByDefault, options))
       break
     default:
       return false
@@ -113,7 +113,7 @@ function toVinyl(buffer, newFileFormat, file) {
 
 function extnamesIsCorrect(...extnames) {
   for (let extname of extnames) {
-    if (extname && ALLOWED_EXTENTIONS.includes(`.${extname}`) == false) {
+    if (extname && ALLOWED_EXTENSIONS.includes(`.${extname}`) == false) {
       return false
     } else {
       return true
