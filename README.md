@@ -34,7 +34,7 @@ _OR_
 ```
 yarn add gulp-sharp-optimize-images -D
 ```
-
+****
 ### Example of usage
 
 ```js
