@@ -100,7 +100,7 @@ async function convert(file, newFileFormat, options) {
 
 function toVinyl(buffer, newFileFormat, file) {
   let newFileName = file.basename.substr(0, file.basename.lastIndexOf(".")) + `.${newFileFormat}`
-  let newFilePath = `${file.dirname}\\${newFileName}`
+  let newFilePath = `${file.dirname}/${newFileName}`
 
   return new Vinyl({
     cwd: file.cwd,
