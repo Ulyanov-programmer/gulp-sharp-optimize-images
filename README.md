@@ -109,8 +109,8 @@ avif: {
 
 Type: `any` (depends on the parameter)<br>
 Option for an output image. <br>
-To get acquainted with all the available parameters, please take a look:
-https://sharp.pixelplumbing.com/api-output
+To familiarize yourself with the available options, refer to the plugin documentation (for example, this section for .jpeg):
+https://sharp.pixelplumbing.com/api-output#jpeg
 
 #### alsoProcessOriginal
 
