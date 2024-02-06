@@ -13,6 +13,8 @@ interface SharpOptimizeImagesInputTypes {
 
 interface SharpOptimizeImagesTypesParams {
   quality?: number
+  logLevel?: string
+  alsoProcessOriginal?: boolean
   lossless?: boolean
   progressive?: boolean
   chromaSubsampling?: string

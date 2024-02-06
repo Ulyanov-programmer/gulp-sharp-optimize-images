@@ -34,21 +34,24 @@ _OR_
 ```
 yarn add gulp-sharp-optimize-images -D
 ```
-****
+
+---
+
 ### Example of usage
 
 ```js
-import sharpOptimizeImages from "gulp-sharp-optimize-images";
-import gulp from "gulp";
+import sharpOptimizeImages from 'gulp-sharp-optimize-images';
+import gulp from 'gulp';
 
 export function yourImages() {
   return gulp
-    .src("yourSrcImagePath")
+    .src('yourSrcImagePath')
     .pipe(
       sharpOptimizeImages({
         webp: {
           quality: 80,
           lossless: false,
+          alsoProcessOriginal: true,
         },
         avif: {
           quality: 100,
@@ -67,7 +70,7 @@ export function yourImages() {
       })
     )
 
-    .pipe(gulp.dest("yourDistImagePath"));
+    .pipe(gulp.dest('yourDistImagePath'));
 }
 ```
 
@@ -93,8 +96,11 @@ Also optimizes and transmits the original.
 <br>
 
 ```js
-// example, all images will be converted to avif. The originals will also be optimized and transferred.
+// example, all images will be converted to avif.
 avif: {
+  // If true, the originals will also be optimized and transferred.
+  alsoProcessOriginal: false,
+
   param: value,
 },
 ```
@@ -104,7 +110,13 @@ avif: {
 Type: `any` (depends on the parameter)<br>
 Option for an output image. <br>
 To get acquainted with all the available parameters, please take a look:
-https://sharp.pixelplumbing.com/api-output#jpeg
+https://sharp.pixelplumbing.com/api-output
+
+#### alsoProcessOriginal
+
+Type: `boolean`<br>
+Default value: `false`<br>
+It also allows you to optimize and move the original file. It only works for the type `outputImageExtname: {}` parameter. <br>
 
 ### imageExtname_to_imageExtname
 
@@ -121,6 +133,33 @@ jpg_to_heif: {
 jpg_to_jpg: {
   param: value,
 },
+```
+
+### logLevel
+
+Type: `string`<br>
+Default value: `small`<br>
+Can get the value: `small | full | ''`<br>
+Allows you to change the logging.
+
+```js
+// usage example
+sharpOptimizeImages({
+  logLevel: 'small',
+  ...
+});
+```
+
+```bash
+// Log if the value of logLevel is equal to 'small' (default value):
+yourImage.jpg => webp
+
+// Log if the value of logLevel is equal to 'full':
+The file the_absolute_path_to_your/image.jpg was processed to image.webp
+
+// Log if the value of logLevel is equal to '' (or other value):
+
+(the log is disabled)
 ```
 
 ### Supported format names:

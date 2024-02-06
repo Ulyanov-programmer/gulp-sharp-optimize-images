@@ -33,13 +33,13 @@
     "avif"
   ],
   "engines": {
-    "node": ">=14.15.0"
+    "node": ">=18.17.0"
   },
   "bugs": {
     "url": "https://github.com/Ulyanov-programmer/gulp-sharp-optimize-images/issues"
   },
   "dependencies": {
-    "sharp": "^0.32.1",
+    "sharp": "^0.33.2",
     "through2": "^4.0.2",
     "vinyl": "^3.0.0"
   },
