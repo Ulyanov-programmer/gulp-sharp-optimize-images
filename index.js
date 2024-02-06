@@ -76,6 +76,9 @@ export default function sharpOptimizeImages(options) {
 }
 
 async function convert(file, newFileFormat, options) {
+  if (newFileFormat == 'heif')
+    options.compression = 'av1'
+
   let sharpInstance =
     sharp(file.contents, DEFAULT_SHARP_OPTIONS)
       .toFormat(newFileFormat, Object.assign(DEFAULT_CONVERSION_OPTIONS, options))
